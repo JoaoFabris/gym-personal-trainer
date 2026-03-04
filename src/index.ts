@@ -30,7 +30,7 @@ await app.register(fastifySwagger, {
     transform: jsonSchemaTransform,
 });
 
-app.register(fastifySwaggerUi, {
+await app.register(fastifySwaggerUi, {
     routePrefix: "/docs"
 })
 
