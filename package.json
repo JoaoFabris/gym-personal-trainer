@@ -1,0 +1,24 @@
+{
+  "name": "gym-personal-trainer",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "dependencies": {
+    "@types/node": "^24.11.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0"
+  }
+}

@@ -1,0 +1,7 @@
+## SEMPRE VERIFICAR A VERSÃO DO NODE, QUANDO TRABALHAR COM UMA EQUIPE COM DIFERENTES DEVS
+--> package.json 
+
+    "engines": {
+    "node": "24"
+  },
+  ==> isso exige q cada dev tem q rodar a versao node 24 para rodar esse projeto
