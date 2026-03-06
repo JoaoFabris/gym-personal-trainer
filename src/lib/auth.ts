@@ -5,7 +5,9 @@ import { openAPI } from "better-auth/plugins";
 import { prisma } from "./db.js";
 
 export const auth = betterAuth({
-  trustedOrigins: ["http://localhost:3000"], //aqui ele permite q frontend fazer request para a api
+  trustedOrigins: [
+    "http://localhost:3000",// ← permite o Scalar fazer requests
+  ], //aqui ele permite q frontend fazer request para a api
   emailAndPassword: {
     enabled: true,
   },
