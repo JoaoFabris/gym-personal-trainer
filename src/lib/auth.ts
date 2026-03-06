@@ -7,7 +7,10 @@ import { prisma } from "./db.js";
 export const auth = betterAuth({
   trustedOrigins: [
     "http://localhost:3000",// ← permite o Scalar fazer requests
+    "http://localhost:8081",    // 👈
+    "http://127.0.0.1:8081",   // 👈
   ], //aqui ele permite q frontend fazer request para a api
+
   emailAndPassword: {
     enabled: true,
   },

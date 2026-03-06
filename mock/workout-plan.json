@@ -1,0 +1,108 @@
+{
+  "name": "Upper/Lower Split - Hypertrophy Focus",
+  "workoutDays": [
+    {
+      "name": "Upper Body A",
+      "isRest": false,
+      "weekDay": "MONDAY",
+      "coverImageUrl": "https://gw8hy3fdcv.ufs.sh/f/ccoBDpLoAPCOgP9yzQkNGronCvXmSzAMs1N3KgLdE5yHT6Yk",
+      "estimatedDurationInSeconds": 3600,
+      "exercises": [
+        {
+          "order": 1,
+          "name": "Barbell Bench Press",
+          "sets": 4,
+          "reps": 8,
+          "restTimeInSeconds": 120
+        },
+        {
+          "order": 2,
+          "name": "Pull-Ups",
+          "sets": 4,
+          "reps": 8,
+          "restTimeInSeconds": 120
+        },
+        {
+          "order": 3,
+          "name": "Seated Dumbbell Shoulder Press",
+          "sets": 3,
+          "reps": 10,
+          "restTimeInSeconds": 90
+        },
+        {
+          "order": 4,
+          "name": "Barbell Rows",
+          "sets": 3,
+          "reps": 10,
+          "restTimeInSeconds": 90
+        },
+        {
+          "order": 5,
+          "name": "Tricep Dips",
+          "sets": 3,
+          "reps": 12,
+          "restTimeInSeconds": 60
+        },
+        {
+          "order": 6,
+          "name": "Barbell Bicep Curls",
+          "sets": 3,
+          "reps": 12,
+          "restTimeInSeconds": 60
+        }
+      ]
+    },
+    {
+      "name": "Lower Body A",
+      "isRest": false,
+      "weekDay": "WEDNESDAY",
+      "coverImageUrl": "https://gw8hy3fdcv.ufs.sh/f/ccoBDpLoAPCOgP9yzQkNGronCvXmSzAMs1N3KgLdE5yHT6Yk",
+      "estimatedDurationInSeconds": 3600,
+      "exercises": [
+        {
+          "order": 1,
+          "name": "Barbell Squats",
+          "sets": 4,
+          "reps": 8,
+          "restTimeInSeconds": 120
+        },
+        {
+          "order": 2,
+          "name": "Romanian Deadlifts",
+          "sets": 4,
+          "reps": 8,
+          "restTimeInSeconds": 120
+        },
+        {
+          "order": 3,
+          "name": "Walking Lunges",
+          "sets": 3,
+          "reps": 12,
+          "restTimeInSeconds": 90
+        },
+        {
+          "order": 4,
+          "name": "Leg Curl Machine",
+          "sets": 3,
+          "reps": 12,
+          "restTimeInSeconds": 60
+        },
+        {
+          "order": 5,
+          "name": "Standing Calf Raises",
+          "sets": 4,
+          "reps": 15,
+          "restTimeInSeconds": 60
+        }
+      ]
+    },
+    {
+      "name": "Rest Day",
+      "isRest": true,
+      "weekDay": "FRIDAY",
+      "coverImageUrl": "https://gw8hy3fdcv.ufs.sh/f/ccoBDpLoAPCOgP9yzQkNGronCvXmSzAMs1N3KgLdE5yHT6Yk",
+      "estimatedDurationInSeconds": 1,
+      "exercises": []
+    }
+  ]
+}
