@@ -1,7 +1,31 @@
+# dependencies
 node_modules/
+
+# build
 dist/
 build/
+
+# environment variables
 .env
+
+# OS files
 .DS_Store
+
+# arquivos locais
 DICASIMPORTANTES.txt
+
+# prisma generated client
 /src/generated/prisma
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+
+# coverage
+coverage/

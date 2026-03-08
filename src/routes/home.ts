@@ -13,6 +13,7 @@ export const homeRoutes = async (app: FastifyInstance) => {
     method: "GET",
     url: "/:date",
     schema: {
+      operationId: 'getHomeData',
       tags: ["Home"],
       summary: "Get home page data",
       params: z.object({
