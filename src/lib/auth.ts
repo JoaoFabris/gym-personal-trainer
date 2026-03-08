@@ -28,7 +28,7 @@ export const auth = betterAuth({
   plugins: [openAPI()],
   advanced: {
     crossSubDomainCookies: {
-      enabled: true,
+      enabled: true, // aqui ele permite q o coockie possa setado como domain correto, compartilhado entre difirente subdominios, dentro do dominio
     }
   }
 });
