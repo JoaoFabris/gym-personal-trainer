@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
-    "build": "tsc"
+    "build": "pnpm exec prisma generate && tsc"
   },
   "engines": {
     "node": "24.x"
