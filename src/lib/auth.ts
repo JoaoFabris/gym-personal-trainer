@@ -27,12 +27,8 @@ export const auth = betterAuth({
   }),
   plugins: [openAPI()],
   advanced: {
-    crossSubDomainCookies: {
-      enabled: true, // aqui ele permite q o coockie possa setado como domain correto, compartilhado entre difirente subdominios, dentro do dominio
-      domain: ".onrender.com",
-    },
     defaultCookieAttributes: {
-      sameSite: "none",
+      sameSite: "none",// aqui ele permite q o coockie possa setado como domain correto, compartilhado entre difirente subdominios, dentro do dominio
       secure: true,
     }
   }
