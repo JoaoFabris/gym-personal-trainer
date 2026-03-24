@@ -141,8 +141,14 @@ app.route({
       const response = await auth.handler(req);
 
       reply.status(response.status);
-      response.headers.forEach((value, key) => reply.header(key, value));
-      reply.send(response.body ? await response.text() : null);
+      
+      // Repassa todos os headers incluindo Set-Cookie
+      response.headers.forEach((value, key) => {
+        reply.header(key, value);
+      });
+
+      const body = await response.text();
+      reply.send(body || null);
     } catch (error) {
       app.log.error(error);
       reply.status(500).send({
