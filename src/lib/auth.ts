@@ -10,7 +10,8 @@ export const auth = betterAuth({
   trustedOrigins: [
     env.WEB_APP_BASE_URL,
     env.API_BASE_URL,
-    "http://127.0.0.1:8081",
+    "http://localhost:3000",
+    "http://localhost:8081",
   ],
   socialProviders: {
     google: {
@@ -19,17 +20,17 @@ export const auth = betterAuth({
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     },
   },
-  emailAndPassword: {
-    enabled: true,
-  },
-  database: prismaAdapter(prisma, {
-    provider: "postgresql",
-  }),
+  emailAndPassword: { enabled: true },
+  database: prismaAdapter(prisma, { provider: "postgresql" }),
   plugins: [openAPI()],
+  account: {
+    skipStateCookieCheck: true, // resolve o state_mismatch cross-domain
+  },
   advanced: {
     defaultCookieAttributes: {
-      sameSite: "none",// aqui ele permite q o coockie possa setado como domain correto, compartilhado entre difirente subdominios, dentro do dominio
+      sameSite: "none",
       secure: true,
-    }
-  }
+      partitioned: true, // obrigatório para cross-domain moderno
+    },
+  },
 });
