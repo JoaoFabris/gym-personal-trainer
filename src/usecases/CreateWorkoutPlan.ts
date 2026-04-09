@@ -83,6 +83,8 @@ export class CreateWorkoutPlan {
           },
         },
       });
+
+      
       const result = await tx.workoutPlan.findUnique({
         where: { id: workoutPlan.id },
         include: {
