@@ -28,4 +28,5 @@ yarn-error.log*
 .idea/
 
 # coverage
-coverage/dist/
+coverage/
+dist/
