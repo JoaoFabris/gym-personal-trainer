@@ -2,7 +2,11 @@
 
 API RESTful para uma plataforma de personal trainer com geração de planos de treino via IA, autenticação segura e acompanhamento de sessões e estatísticas de evolução.
 
-> ⚠️ Este repositório contém apenas o **backend**. O frontend está em desenvolvimento separado.
+> 📱 **Frontend:** [frontend-gym-personal-trainer](https://github.com/JoaoFabris/frontend-gym-personal-trainer) (Next.js 16, mobile-first)
+
+<p align="center">
+  <img src="docs/screenshots/hero.png" alt="Telas do app consumindo esta API: onboarding com IA, home, plano de treino e coach" width="900">
+</p>
 
 ---
 
@@ -69,19 +73,30 @@ pnpm install
 Crie um arquivo `.env` na raiz do projeto:
 
 ```env
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/gym_trainer"
+PORT=8081
+DATABASE_URL="postgresql://postgres:password@localhost:5433/bootcamp-treinos-api"
 
 BETTER_AUTH_SECRET="seu_secret_aqui"
-BETTER_AUTH_URL="http://localhost:3000"
+BETTER_AUTH_URL="http://localhost:8081"
 
-GOOGLE_GENERATIVE_AI_API_KEY="sua_chave_google"
-OPENAI_API_KEY="sua_chave_openai"
+# OAuth do Google (login)
+GOOGLE_CLIENT_ID="seu_google_client_id"
+GOOGLE_CLIENT_SECRET="seu_google_client_secret"
+
+# IA
+GOOGLE_GENERATIVE_AI_API_KEY="sua_chave_gemini"
+OPENAI_API_KEY="sua_chave_openai"   # opcional
+
+# URL do frontend (CORS e origens confiáveis do Better Auth)
+WEB_APP_BASE_URL="http://localhost:3000"
 ```
+
+> Todas as variáveis são validadas com Zod na inicialização (`src/lib/env.ts`): a API não sobe com configuração inválida.
 
 ### 4. Suba o banco com Docker (opcional)
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 5. Execute as migrations
@@ -96,9 +111,9 @@ npx prisma migrate dev
 pnpm dev
 ```
 
-O servidor estará disponível em `http://localhost:3000`.
+O servidor estará disponível em `http://localhost:8081`.
 
-A documentação interativa da API estará em `http://localhost:3000/reference`.
+A documentação interativa da API estará em `http://localhost:8081/reference`.
 
 ---
 
@@ -164,7 +179,7 @@ A rota `/ai` recebe os dados do usuário (objetivo, nível, disponibilidade) e u
 O projeto inclui `Dockerfile` e `docker-compose.yml` para facilitar o setup do banco em desenvolvimento:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ---
